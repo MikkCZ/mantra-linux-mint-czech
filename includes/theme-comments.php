@@ -38,7 +38,7 @@ function mantra_comment( $comment, $args, $depth ) {
 		<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 			<?php
 				/* translators: 1: date, 2: time */
-				printf(  '%1$s '.__('at', 'mantra' ).' %2$s', get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'mantra' ), ' ' );
+				printf(  '%1$s '.__('', 'mantra' ).' %2$s', get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'mantra' ), ' ' );
 			?>
 		</div><!-- .comment-meta .commentmetadata -->
 
@@ -82,7 +82,7 @@ if ( ! function_exists( 'mantra_comments_on' ) ) :
  * Number of comments on loop post if comments are enabled.
  */
 function mantra_comments_on() {
-printf ( comments_popup_link( __( 'Leave a comment', 'mantra' ), __( '<b>1</b> Comment', 'mantra' ), __( '<b>%</b> Comments', 'mantra' ) ));
+printf ( comments_popup_link( __( 'Leave a comment', 'mantra' ), __( 'Komentář <b>1</b> ', 'mantra' ), __( 'Komentářů <b>%</b>', 'mantra' ) ));
 }
 endif;
 
@@ -91,7 +91,7 @@ endif;
  */
 function mantra_number_comments() { ?>
 			<h3 id="comments-title">
-				<?php  printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'mantra' ),
+				<?php  printf( _n( 'Jedna odpověď na %2$s', '%1$s odpovědi(í) na %2$s', get_comments_number(), 'mantra' ),
 				number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' ); ?>
 			</h3>
 <?php }

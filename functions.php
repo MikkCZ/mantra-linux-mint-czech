@@ -23,4 +23,5 @@ require_once(dirname(__FILE__) . "/includes/theme-shortcodes.php"); //Theme shor
 require_once(dirname(__FILE__) . "/includes/theme-functions.php"); //Theme misc functions
 require_once(dirname(__FILE__) . "/includes/theme-hooks.php"); //Theme hooks
 
+
 ?>

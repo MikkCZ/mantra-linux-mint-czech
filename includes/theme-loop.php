@@ -165,7 +165,7 @@ if ($mantra_postdate == "Hide")  $date_string='';
 // If author is hidden don't give it a value 
 $author_string = sprintf( '<span class="author vcard" >'.__( 'By ','mantra'). ' <a class="url fn n" href="%1$s" title="%2$s">%3$s</a> <span class="bl_sep">|</span></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'mantra' ), get_the_author() ),
+			sprintf( esc_attr__( 'Zobrazit všechny příspěvky od autora %s', 'mantra' ), get_the_author() ),
 			get_the_author()
 		) ;
 if ($mantra_postauthor == "Hide")  $author_string='';
@@ -203,11 +203,11 @@ function mantra_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
-		$posted_in =  '<span class="bl_posted">'.__( 'Tagged','mantra').' %2$s.</span><span class="bl_bookmark">'.__(' Bookmark the ','mantra').' <a href="%3$s" title="'.__('Permalink to','mantra').' %4$s" rel="bookmark"> '.__('permalink','mantra').'</a>.</span>';
+		$posted_in =  '<span class="bl_posted">'.__( 'Tagged','mantra').' %2$s.</span><span class="bl_bookmark">'.__(' Bookmark the ','mantra').' <a href="%3$s" title="'.__('Odkaz na','mantra').' %4$s" rel="bookmark"> '.__('permalink','mantra').'</a>.</span>';
 	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = '<span class="bl_bookmark">'.__( 'Bookmark the ','mantra'). ' <a href="%3$s" title="'.__('Permalink to','mantra').' %4$s" rel="bookmark">'.__('permalink','mantra').'</a>. </span>';
+		$posted_in = '<span class="bl_bookmark">'.__( 'Bookmark the ','mantra'). ' <a href="%3$s" title="'.__('Odkaz na','mantra').' %4$s" rel="bookmark">'.__('permalink','mantra').'</a>. </span>';
 	} else {
-		$posted_in = '<span class="bl_bookmark">'.__( 'Bookmark the ','mantra'). ' <a href="%3$s" title="'.__('Permalink to','mantra').' %4$s" rel="bookmark">'.__('permalink','mantra').'</a>. </span>';
+		$posted_in = '<span class="bl_bookmark">'.__( 'Bookmark the ','mantra'). ' <a href="%3$s" title="'.__('Odkaz na','mantra').' %4$s" rel="bookmark">'.__('permalink','mantra').'</a>. </span>';
 	}
 	// Prints the string, replacing the placeholders.
 	printf(

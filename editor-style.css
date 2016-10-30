@@ -5,7 +5,7 @@ Theme Name: Mantra
 Used to style the TinyMCE editor.
 */
 html .mceContentBody {
-	max-width:640px;
+	max-width:1040px;
 }
 * {
 	font-family: Georgia, "Bitstream Charter", serif;
